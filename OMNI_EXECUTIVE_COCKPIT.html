@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMEGA OMNIVERSE — Unified Executive Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        darkbg: '#080c14',
+                        cardbg: '#0f172a',
+                        borderbg: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #080c14; color: #f8fafc; }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .glow-emerald:hover { box-shadow: 0 0 25px rgba(34, 197, 94, 0.25); }
+        .active-tab { border-color: #22c55e; color: #22c55e; background: rgba(34, 197, 94, 0.1); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-200">
+
+    <!-- Top Sovereign Header -->
+    <header class="sticky top-0 z-50 glass border-b border-slate-800 px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center space-x-3.5">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-400 flex items-center justify-center font-black text-xl text-black shadow-lg shadow-emerald-500/20">
+                Ω
+            </div>
+            <div>
+                <h1 class="text-lg font-extrabold tracking-tight text-white flex items-center gap-2">
+                    OMEGA OMNIVERSE
+                    <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">Executive Mission Control</span>
+                </h1>
+                <p class="text-xs text-slate-400">Autonomous Career Conquest, Enterprise Deal Engine & Project Factory</p>
+            </div>
+        </div>
+
+        <!-- Telemetry Indicators -->
+        <div class="flex items-center gap-3 text-xs font-mono">
+            <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-slate-400">Suites:</span>
+                <span class="text-white font-bold">21 / 21 GREEN</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-400">Tests:</span>
+                <span class="text-emerald-400 font-bold">214 Passing (100%)</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="text-slate-400">Skills:</span>
+                <span class="text-purple-400 font-bold">3,837 Registered</span>
+            </div>
+            <button onclick="refreshIframe()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                Reload Active View
+            </button>
+            <a id="btn-open-external" href="universal_job_cockpit.html" target="_blank" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-black font-semibold rounded-lg text-xs flex items-center gap-1.5 transition shadow">
+                Open in New Tab ↗
+            </a>
+        </div>
+    </header>
+
+    <!-- Key Metrics Banner -->
+    <div class="glass border-b border-slate-800 px-6 py-3">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Total Opportunity Universe</span>
+                <span class="text-xl font-black text-white">16,553</span>
+                <span class="text-[10px] text-slate-500 block">Indexed across 5 DBs</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Dissected Vacancy Census</span>
+                <span class="text-xl font-black text-emerald-400">500</span>
+                <span class="text-[10px] text-emerald-500/80 block">Classified L1–L7</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Application Dockets Staged</span>
+                <span class="text-xl font-black text-purple-400">423</span>
+                <span class="text-[10px] text-purple-400/80 block">In approval_queue.csv</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Enterprise Application Dossiers</span>
+                <span class="text-xl font-black text-blue-400">256</span>
+                <span class="text-[10px] text-blue-400/80 block">applications_generated/</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Active Recruiter Network</span>
+                <span class="text-xl font-black text-amber-400">9,223</span>
+                <span class="text-[10px] text-amber-400/80 block">1,449 HR Gatekeepers</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                <span class="text-[9px] uppercase font-mono text-slate-400 block font-semibold">Test Suite Certification</span>
+                <span class="text-xl font-black text-emerald-400">196 / 196</span>
+                <span class="text-[10px] text-emerald-500/80 block">100% GREEN (43.5s)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subsystem Cockpit Switcher Navigation -->
+    <nav class="glass border-b border-slate-800 px-6 overflow-x-auto flex space-x-2 text-xs font-semibold py-2">
+        <button onclick="switchCockpit('supreme')" id="btn-supreme" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 flex items-center gap-2 transition active-tab">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Supreme Sovereign Command
+        </button>
+        <button onclick="switchCockpit('bengaluru_startup')" id="btn-bengaluru_startup" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Bengaluru Startup Intelligence & Career Radar (75 Jobs)
+        </button>
+        <button onclick="switchCockpit('blr500')" id="btn-blr500" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Bangalore Top 500 Startups
+        </button>
+        <button onclick="switchCockpit('deals')" id="btn-deals" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            546-Account Deal Machine
+        </button>
+        <button onclick="switchCockpit('universal')" id="btn-universal" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+            Universal Job & Skill Cockpit
+        </button>
+        <button onclick="switchCockpit('apex')" id="btn-apex" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+            APEX 7-Agent Career OS
+        </button>
+        <button onclick="switchCockpit('fortune500')" id="btn-fortune500" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            Fortune 500 Project Factory
+        </button>
+        <button onclick="switchCockpit('prompts')" id="btn-prompts" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+            prompts.chat Studio (2,627 Prompts)
+        </button>
+        <button onclick="switchCockpit('coolify')" id="btn-coolify" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-fuchsia-400"></span>
+            Coolify Cloud PaaS (352 Services)
+        </button>
+        <button onclick="switchCockpit('windmill')" id="btn-windmill" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Windmill Workflow Engine (Flows, Crons & Secrets)
+        </button>
+        <button onclick="switchCockpit('blackbird')" id="btn-blackbird" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-red-400"></span>
+            Blackbird OSINT (692 Sites)
+        </button>
+        <button onclick="switchCockpit('powershell')" id="btn-powershell" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            PowerShell Autonomous Ecosystem (github.com/PowerShell/PowerShell)
+        </button>
+        <button onclick="switchCockpit('powertoys')" id="btn-powertoys" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            Microsoft PowerToys Suite (github.com/microsoft/PowerToys)
+        </button>
+        <button onclick="switchCockpit('ghidra')" id="btn-ghidra" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            NSA Ghidra SRE (github.com/NationalSecurityAgency/ghidra)
+        </button>
+        <button onclick="switchCockpit('airflow')" id="btn-airflow" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+            Apache Airflow (github.com/apache/airflow)
+        </button>
+        <button onclick="switchCockpit('plane')" id="btn-plane" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            Plane Project Platform (github.com/makeplane/plane)
+        </button>
+        <button onclick="switchCockpit('n8n')" id="btn-n8n" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            n8n Automation & AI Agents (github.com/n8n-io/n8n)
+        </button>
+        <button onclick="switchCockpit('infisical')" id="btn-infisical" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            Infisical SecretOps (github.com/Infisical/infisical)
+        </button>
+        <button onclick="switchCockpit('free_for_dev')" id="btn-free_for_dev" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Free-For-Dev Cloud (1,396+ Tiers)
+        </button>
+        <button onclick="switchCockpit('arrow')" id="btn-arrow" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            Apache Arrow (github.com/apache/arrow)
+        </button>
+        <button onclick="switchCockpit('whiteboards')" id="btn-whiteboards" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Hiring Without Whiteboards (761 Employers)
+        </button>
+        <button onclick="switchCockpit('hummingbot')" id="btn-hummingbot" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Hummingbot Trading (github.com/hummingbot/hummingbot)
+        </button>
+        <button onclick="switchCockpit('hyprland')" id="btn-hyprland" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            Hyprland Compositor (github.com/hyprwm/Hyprland)
+        </button>
+        <button onclick="switchCockpit('awesome')" id="btn-awesome" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-violet-400"></span>
+            Awesome Universe (github.com/sindresorhus/awesome)
+        </button>
+        <button onclick="switchCockpit('marketplace')" id="btn-marketplace" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+            GitHub Marketplace (github.com/marketplace - 373 Tools)
+        </button>
+        <button onclick="switchCockpit('mcp')" id="btn-mcp" class="px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            MCP Master Hub (24 Servers, 260 Tools)
+        </button>
+    </nav>
+
+    <!-- Embedded High-Performance Cockpit Frame Container -->
+    <main class="flex-1 flex flex-col relative w-full h-[calc(100vh-160px)]">
+        <iframe id="cockpit-viewport" src="omega_supreme_command_center.html" class="w-full flex-1 border-0 bg-darkbg"></iframe>
+    </main>
+
+    <!-- Script Logic -->
+    <script>
+        const COCKPIT_URLS = {
+            supreme: { url: "omega_supreme_command_center.html", title: "OMEGA Supreme Sovereign Command Center" },
+            bengaluru_startup: { url: "bengaluru_startup_intelligence_cockpit.html", title: "Bengaluru Startup Intelligence, Funding & Career Radar (75 Jobs, 16 Rounds, 234 Deltas)" },
+            blr500: { url: "bangalore_top_500_cockpit.html", title: "Bangalore Top 500 Startups & 10k TPS Simulator" },
+            deals: { url: "bangalore_enterprise_deal_cockpit.html", title: "Bangalore Enterprise Commercial Deal Cockpit (546 Accounts)" },
+            universal: { url: "universal_job_cockpit.html", title: "Universal Job & Skill Intelligence Cockpit" },
+            apex: { url: "apex_career_cockpit.html", title: "APEX Career Supremacy OS" },
+            fortune500: { url: "fortune_500_cockpit.html", title: "Fortune 500 Project Factory" },
+            prompts: { url: "prompts_chat_cockpit.html", title: "prompts.chat Studio & Prompt Intelligence (2,627 Prompts)" },
+            coolify: { url: "coolify_control_cockpit.html", title: "Coolify v4 Autonomous Infrastructure & PaaS Cockpit (352 Services)" },
+            windmill: { url: "windmill_control_cockpit.html", title: "Windmill Autonomous Workflow Engine & Developer Platform v2.0 (Flows, Scripts, Apps, Crons, Secrets & Webhooks)" },
+            blackbird: { url: "blackbird_cockpit.html", title: "Blackbird OSINT & Defensive Intelligence Cockpit (692 Sites)" },
+            powershell: { url: "powershell_control_cockpit.html", title: "PowerShell Autonomous Ecosystem & Mission Control (AST, PSScriptAnalyzer, Runbooks, PSGallery, Runspaces)" },
+            powertoys: { url: "powertoys_control_cockpit.html", title: "Microsoft PowerToys Autonomous Suite & Mission Control (FancyZones, PT Run, Awake, KBM, AI Paste)" },
+            ghidra: { url: "ghidra_control_cockpit.html", title: "NSA Ghidra Autonomous SRE & Reverse Engineering (Disassembly, Decompiler, P-Code, Vulns, ROP)" },
+            airflow: { url: "airflow_control_cockpit.html", title: "Apache Airflow Autonomous Orchestration & Data Pipeline Flight Deck (DAGs, TaskFlow, Dynamic Mapping, Datasets)" },
+            plane: { url: "plane_control_cockpit.html", title: "Plane CE Autonomous Project & Issue Orchestrator (Kanban, Cycles, Burndown, Modules, Pages, Triage)" },
+            n8n: { url: "n8n_control_cockpit.html", title: "n8n Autonomous Workflow Automation & AI Agent Orchestrator (560+ Nodes, LangChain Multi-Agents)" },
+            infisical: { url: "infisical_control_cockpit.html", title: "Infisical Autonomous SecretOps Platform (Zero-Knowledge Vault, Dynamic Leases, PKI/CA)" },
+            free_for_dev: { url: "free_for_dev_control_cockpit.html", title: "Free-For-Dev Developer Cloud & Zero-Dollar Stack Cockpit (1,396+ Services)" },
+            arrow: { url: "arrow_control_cockpit.html", title: "Apache Arrow In-Memory Columnar & Flight IPC Analytics Cockpit" },
+            whiteboards: { url: "hiring_without_whiteboards_cockpit.html", title: "Hiring Without Whiteboards — 761 Employers" },
+            hummingbot: { url: "hummingbot_control_cockpit.html", title: "Hummingbot Sovereign Algorithmic Trading & Liquidity Cockpit" },
+            hyprland: { url: "hyprland_control_cockpit.html", title: "Hyprland Autonomous Compositor & Dynamic Tiling Window Manager" },
+            awesome: { url: "awesome_control_cockpit.html", title: "Awesome Universe Autonomous Knowledge Graph & Curated Intelligence" },
+            marketplace: { url: "github_marketplace_cockpit.html", title: "GitHub Marketplace Autonomous Ecosystem & Supply Chain Security Auditor (373 Actions & Apps)" },
+            mcp: { url: "mcp_master_cockpit.html", title: "Model Context Protocol (MCP) Master Mission Control (24 Servers, 260 Tools, Composite Multiplexer)" }
+        };
+
+        let currentActiveKey = "supreme";
+
+        function switchCockpit(key) {
+            currentActiveKey = key;
+            const target = COCKPIT_URLS[key];
+            if (!target) return;
+
+            // Update Iframe
+            const iframe = document.getElementById('cockpit-viewport');
+            iframe.src = target.url;
+
+            // Update External Link Button
+            const btnExt = document.getElementById('btn-open-external');
+            btnExt.href = target.url;
+
+            // Update Nav Button Styles
+            Object.keys(COCKPIT_URLS).forEach(k => {
+                const btn = document.getElementById(`btn-${k}`);
+                if (btn) {
+                    if (k === key) {
+                        btn.className = "px-3.5 py-2 rounded-lg border border-transparent flex items-center gap-2 transition active-tab font-bold";
+                    } else {
+                        btn.className = "px-3.5 py-2 rounded-lg border border-transparent hover:border-slate-700 text-slate-400 hover:text-white flex items-center gap-2 transition";
+                    }
+                }
+            });
+        }
+
+        function refreshIframe() {
+            const iframe = document.getElementById('cockpit-viewport');
+            iframe.contentWindow.location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -8,7 +8,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Hosted On: GitHub Pages](https://img.shields.io/badge/Hosted_On-GitHub%20Pages-blue.svg?style=for-the-badge&logo=github)](https://adityamehra007.github.io)
-[![Flagship Control Plane](https://img.shields.io/badge/Control_Plane-anti-7928CA.svg?style=for-the-badge&logo=python&logoColor=white)](https://github.com/AdityaMehra007/anti)
+[![Flagship Engine](https://img.shields.io/badge/Flagship_Engine-anti_(OMEGA)-7928CA.svg?style=for-the-badge&logo=python&logoColor=white)](https://github.com/AdityaMehra007/anti)
+[![Planetary Core](https://img.shields.io/badge/Planetary_Core-Cashflow_Infinity_Omniverse-0070F3.svg?style=for-the-badge&logo=powershell&logoColor=white)](https://github.com/AdityaMehra007/cashflow-infinity-omniverse)
 [![Status: Open to Work](https://img.shields.io/badge/Status-Immediate%20Joining-brightgreen?style=for-the-badge&logo=target&logoColor=white)](mailto:ashishiash007@gmail.com)
 
 ---
@@ -50,7 +51,8 @@ All mission control cockpits are single-file, zero-dependency glassmorphism dash
 
 ## 🏛️ Proprietary Systems Architecture
 
-* ⚡ [**anti**](https://github.com/AdityaMehra007/anti): Flagship autonomous AI control plane, 19-in-1 Omni-Agent Swarm, MCP Master Fleet Hub (260 tools), and 176/176 hermetic test suite.
+* ⚡ [**anti**](https://github.com/AdityaMehra007/anti): Flagship autonomous AI control plane, 19-in-1 Omni-Agent Swarm, MCP Master Fleet Hub (260 tools), and 406/406 verified tests. [Release v1.0.0-omega](https://github.com/AdityaMehra007/anti/releases/tag/v1.0.0-omega).
+* 🌌 [**cashflow-infinity-omniverse**](https://github.com/AdityaMehra007/cashflow-infinity-omniverse): Planetary Dual-Core Autonomous Operating System (2027), 32 Universal Genesis Engines, Core Alpha Autonomous Commerce Matrix & Core Beta Aether Multi-Hazard Resilience Fabric. [Release v2027.1.0-singularity](https://github.com/AdityaMehra007/cashflow-infinity-omniverse/releases/tag/v2027.1.0-singularity).
 * 🎪 [**Eventos-Omega**](https://github.com/AdityaMehra007/Eventos-Omega): Gemini-powered event operations & crowd logistics engine in Kotlin, Room SQLite, and Jetpack Compose.
 * 🏢 [**BUSINESS-OS-**](https://github.com/AdityaMehra007/BUSINESS-OS-): Deterministic business operating system modeling treasury, global trade corridors, and financial reconciliations.
 * 📱 [**ADI-OS**](https://github.com/AdityaMehra007/ADI-OS): Modular Android system control architecture with WorkManager task dispatching and sensor telemetry.
